@@ -1,0 +1,25 @@
+#Smart mini salary and bonus calculator
+#User se Base Salary (e.g., 50000) input lein (float)
+print("-------Smart mini salary and bonus calculator--------")
+salary = int(input("enter the amount of salary:RS"))
+print(type(salary))
+#User se Bonus Percentage (e.g., 10 for 10%) aur Deductions (e.g., 2000) input lein.
+Bonus_percentage = float(input("enter the percentage of the bonus: RS"))
+print(type(Bonus_percentage))
+Deductions = int (input("enter the amount that will be deduct from salary: RS"))
+print(type(Deductions))
+#Explicit Conversion use karke:
+#Bonus Amount calculate karein:
+Bonus_amount = salary * (Bonus_percentage)/100
+#Final Salary calculate karein:
+Final_salary = salary + Bonus_amount - Deductions
+print("the final salary is = ", Final_salary)
+#Check karein aur print karein (Logical & Comparison Operators se):
+#Kya Final Salary base salary se badi hai? (True/False print karein)
+Greater_or_not = (Final_salary > salary)
+print("the final_salary is greater than basic salary or not?",Greater_or_not)
+#Kya Final Salary > 50000 AND Deductions < 5000 hai? (True/False print karein)
+if(Final_salary > salary and Deductions < 5000):
+    print("Condition Satisfied: Final salary is high and deductions are low.")
+else:
+    print("Condition Not Satisfied.")
